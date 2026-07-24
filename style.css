@@ -5,9 +5,22 @@
 }
 
 body{
-    background:#f6f6f4;
+
+    background:
+    radial-gradient(circle at top,
+    #ffffff 0%,
+    #f8f8f6 40%,
+    #efefec 100%);
+
     color:#222;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+
+    font-family:-apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
 }
 
 .container{
@@ -16,7 +29,7 @@ body{
 
     margin:0 auto;
 
-    padding:70px 25px;
+    padding:90px 30px;
 
     text-align:center;
 
@@ -38,7 +51,7 @@ body{
 
 .logo{
 
-    width:230px;
+    width:280px;
 
     display:block;
 
@@ -48,10 +61,12 @@ body{
 
 h1{
 
-    font-size:42px;
+    font-size:52px;
 
     font-weight:700;
 
+    letter-spacing:-1.5px;
+    
     margin-bottom:15px;
 
 }
@@ -88,13 +103,21 @@ h1{
 
     text-decoration:none;
 
-    background:white;
+    background:rgba(255,255,255,.85);
 
-    border-radius:20px;
+    backdrop-filter:blur(20px);
+    
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:24px;
 
     padding:22px 26px;
 
-    border:1px solid #ececec;
+    border:1px solid rgba(0,0,0,.05);
+
+    box-shadow:
+  
+    0 8px 24px rgba(0,0,0,.04);
 
     transition:.25s;
 
@@ -142,17 +165,24 @@ h1{
 
 .badge{
 
-    background:#8B1E2D;
+    background:linear-gradient(
+    135deg,
+    #9b2234,
+    #6d1420);
 
     color:white;
 
-    padding:7px 14px;
+    padding:8px 15px;
 
     border-radius:999px;
 
     font-size:12px;
 
     font-weight:700;
+
+    box-shadow:
+
+    0 6px 18px rgba(139,30,45,.25);
 
 }
 
@@ -187,5 +217,31 @@ padding:18px;
 font-size:17px;
 
 }
+
+}
+
+/* ---------- Card Animation ---------- */
+
+.card{
+    opacity:0;
+    animation:fadeUp .6s ease forwards;
+}
+
+.card:nth-child(1){animation-delay:.15s;}
+.card:nth-child(2){animation-delay:.3s;}
+.card:nth-child(3){animation-delay:.45s;}
+.card:nth-child(4){animation-delay:.6s;}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
