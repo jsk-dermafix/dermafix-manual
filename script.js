@@ -1,33 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // 모든 Recommended 배지 숨기기
-    document.querySelectorAll(".badge").forEach(badge=>{
-        badge.style.display="none";
+    const badges = document.querySelectorAll(".badge");
+
+    badges.forEach((badge) => {
+        badge.style.display = "none";
     });
 
-    const lang = navigator.language.toLowerCase();
+    // 브라우저 언어 가져오기
+    const lang = (navigator.language || navigator.userLanguage).toLowerCase();
 
-    if(lang.startsWith("ko")){
+    let targetBadge = "en-badge";
 
-        document.getElementById("ko-badge").style.display="inline-block";
+    if (lang.startsWith("ko")) {
+
+        targetBadge = "ko-badge";
+
+    } else if (lang.startsWith("ja")) {
+
+        targetBadge = "ja-badge";
+
+    } else if (lang.startsWith("zh")) {
+
+        targetBadge = "zh-badge";
 
     }
 
-    else if(lang.startsWith("ja")){
+    // 추천 배지만 표시
+    const badge = document.getElementById(targetBadge);
 
-        document.getElementById("ja-badge").style.display="inline-block";
+    if (badge) {
 
-    }
-
-    else if(lang.startsWith("zh")){
-
-        document.getElementById("zh-badge").style.display="inline-block";
-
-    }
-
-    else{
-
-        document.getElementById("en-badge").style.display="inline-block";
+        badge.style.display = "inline-flex";
 
     }
 
