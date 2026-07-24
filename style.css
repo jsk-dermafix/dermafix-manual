@@ -63,7 +63,7 @@ body{
 
 .logo{
 
-    width:250px;
+    width:300px;
 
     display:block;
 
@@ -182,51 +182,46 @@ h1{
 
     flex:1;
 
-    text-align:left;
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
 
 }
 
 .info strong{
 
-    display:block;
-
     font-size:20px;
 
     color:#222;
 
-}
-
-.info small{
-
-    color:#888;
-
-}
-
-.badge{
-
-    margin-left:auto;
-
-    background:linear-gradient(135deg,#c41524,#8d1120);
-
-    color:white;
-
-    border-radius:999px;
-
-    padding:7px 14px;
-
-    font-size:11px;
-
     font-weight:700;
 
-    box-shadow:
+}
 
-    0 6px 14px rgba(160,30,40,.28);
+
+.badge{
 
     display:inline-flex;
 
     align-items:center;
 
     justify-content:center;
+
+    padding:4px 10px;
+
+    border-radius:999px;
+
+    background:#c41524;
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    margin-left:8px;
 
     flex-shrink:0;
 
@@ -282,11 +277,19 @@ h1{
 
     .flag{
 
-        font-size:28px;
+    font-size:30px;
 
-        margin-right:12px;
+    width:42px;
 
-    }
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
 
     .info strong{
 
@@ -294,19 +297,13 @@ h1{
 
     }
 
-    .info small{
-
-        font-size:13px;
-
-    }
-
     .badge{
 
-        padding:6px 12px;
+    padding:4px 9px;
 
-        font-size:10px;
+    font-size:10px;
 
-    }
+}
 
     .arrow{
 
