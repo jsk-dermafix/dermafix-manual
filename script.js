@@ -1,38 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-    // 모든 Recommended 배지 숨기기
-    const badges = document.querySelectorAll(".badge");
-
-    badges.forEach((badge) => {
-        badge.style.display = "none";
-    });
-
-    // 브라우저 언어 가져오기
-    const lang = (navigator.language || navigator.userLanguage).toLowerCase();
-
-    let targetBadge = "en-badge";
-
-    if (lang.startsWith("ko")) {
-
-        targetBadge = "ko-badge";
-
-    } else if (lang.startsWith("ja")) {
-
-        targetBadge = "ja-badge";
-
-    } else if (lang.startsWith("zh")) {
-
-        targetBadge = "zh-badge";
-
+const langs = [
+    {
+        code: "ko",
+        flag: "🇰🇷",
+        name: "한국어",
+        file: "korea.pdf"
+    },
+    {
+        code: "en",
+        flag: "🇺🇸",
+        name: "English",
+        file: "eng.pdf"
+    },
+    {
+        code: "ja",
+        flag: "🇯🇵",
+        name: "日本語",
+        file: "japan.pdf"
+    },
+    {
+        code: "zh",
+        flag: "🇨🇳",
+        name: "中文",
+        file: "china.pdf"
     }
+];
 
-    // 추천 배지만 표시
-    const badge = document.getElementById(targetBadge);
+const current = (navigator.language || "en").slice(0,2);
 
-    if (badge) {
+langs.sort((a,b)=>{
+    if(a.code===current) return -1;
+    if(b.code===current) return 1;
+    return 0;
+});
 
-        badge.style.display = "inline-flex";
+const cards = document.querySelector(".cards");
 
-    }
+langs.forEach(lang=>{
+
+    const card = document.createElement("a");
+
+    card.className = "card";
+
+    card.href = lang.file;
+
+    card.target = "_blank";
+
+    card.innerHTML = `
+        <span class="flag">${lang.flag}</span>
+
+        <div class="info">
+            <strong>${lang.name}</strong>
+            ${lang.code===current ? '<span class="badge">Recommended</span>' : ''}
+        </div>
+
+        <span class="arrow">›</span>
+    `;
+
+    cards.appendChild(card);
 
 });
