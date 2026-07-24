@@ -66,6 +66,8 @@ body{
 
     transform:scale(1.03);
 
+}
+
 h1{
 
     font-size:56px;
@@ -194,18 +196,6 @@ h1{
     box-shadow:
 
     0 6px 14px rgba(160,30,40,.28);
-
-}
-
-footer{
-
-    margin-top:60px;
-
-    color:#888;
-
-    line-height:1.8;
-
-    font-size:13px;
 
 }
 
