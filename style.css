@@ -57,6 +57,14 @@ body{
 
     margin:0 auto 35px;
 
+    transition:.35s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.03);
+
 }
 
 h1{
@@ -113,7 +121,7 @@ h1{
 
     padding:22px 26px;
 
-    border:1px solid rgba(0,0,0,.05);
+    border:1px solid rgba(255,255,255,.7);
 
     box-shadow:
   
@@ -127,9 +135,10 @@ h1{
 
 .card:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(-8px) scale(1.02);
 
-    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    box-shadow:
+    0 28px 60px rgba(0,0,0,.15);
 
 }
 
