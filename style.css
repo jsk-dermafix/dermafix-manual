@@ -11,7 +11,15 @@ body{
     color:#222;
 
     background:
-    radial-gradient(circle at top,#ffffff 0%,#f8f8f6 45%,#ededeb 100%);
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8f8f8 30%,
+            #f1f1f1 70%,
+            #e7e7e7 100%
+        );
+
+    min-height:100vh;
 
 }
 
@@ -19,22 +27,23 @@ body{
 
     max-width:820px;
 
-    margin:40px auto;
+    margin:35px auto;
 
-    padding:40px 26px 28px;
+    padding:55px 30px 25px;
 
-    border:2px solid #bf1f2d;
+    border:none;
 
-    border-radius:34px;
+    border-radius:36px;
 
-    background:
-    radial-gradient(circle at top,#ffffff 0%,#fafafa 45%,#efefef 100%);
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(24px);
+
+    -webkit-backdrop-filter:blur(24px);
 
     box-shadow:
 
-    0 20px 60px rgba(0,0,0,.08);
-
-    overflow:hidden;
+        0 20px 60px rgba(0,0,0,.05);
 
 }
 
@@ -54,11 +63,11 @@ body{
 
 .logo{
 
-    width:200px;
+    width:250px;
 
     display:block;
 
-    margin:0 auto 25px;
+    margin:0 auto 28px;
 
 }
 
@@ -70,11 +79,15 @@ body{
 
 h1{
 
-    font-size:56px;
+    font-size:58px;
 
     font-weight:800;
 
     letter-spacing:-2px;
+
+    color:#b51f2b;
+
+    text-align:center;
 
     margin-bottom:18px;
 
@@ -82,13 +95,15 @@ h1{
 
 .sub{
 
-    font-size:19px;
+    text-align:center;
+
+    font-size:18px;
 
     color:#666;
 
-    line-height:1.8;
+    line-height:1.7;
 
-    margin-bottom:45px;
+    margin-bottom:42px;
 
 }
 
@@ -178,6 +193,7 @@ h1{
     font-size:20px;
 
     color:#222;
+
 }
 
 .info small{
@@ -328,7 +344,12 @@ h1{
 
 footer{
 
-    margin-top:28px;
+    margin-top:26px;
+
+    text-align:center;
+
+    font-size:10px;
+
+    color:#999;
 
 }
-
