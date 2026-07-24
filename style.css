@@ -112,6 +112,10 @@ h1{
 
     align-items:center;
 
+    justify-content:flex-start;
+
+    gap:18px;
+
     text-decoration:none;
 
     background:#fff;
@@ -132,9 +136,11 @@ h1{
 
     margin-left:18px;
 
-    font-size:30px;
+    color:#888;
 
-    color:#7f7f7f;
+    font-size:28px;
+
+    font-weight:300;
 
 }
     
@@ -196,6 +202,12 @@ h1{
     box-shadow:
 
     0 6px 14px rgba(160,30,40,.28);
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
 
@@ -295,7 +307,7 @@ font-size:17px;
 
     position:absolute;
 
-    right:25px;
+    right:8px;
 
     bottom:34px;
 
@@ -309,37 +321,25 @@ font-size:17px;
 
 .p-toner{
 
-    width:72px;
-
-    transform:rotate(-2deg);
+    width:62px;
 
 }
 
 .p-serum{
 
-    width:54px;
-
-    transform:rotate(3deg);
-
-    margin-left:-4px;
+    width:48px;
 
 }
 
 .p-device{
 
-    width:86px;
-
-    transform:rotate(-4deg);
+    width:74px;
 
 }
 
 .p-poster{
 
-    width:120px;
-
-    margin-left:-5px;
-
-    transform:rotate(2deg);
+    width:105px;
 
 }
 
