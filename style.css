@@ -27,9 +27,13 @@ body{
 
     max-width:820px;
 
-    margin:35px auto;
+    min-height:calc(100vh - 35px);
 
-    padding:55px 30px 80px;
+    margin:35px auto 0;
+
+    padding:40px 30px 80px;
+
+    box-sizing:border-box;
 
     border:none;
 
@@ -42,14 +46,13 @@ body{
     -webkit-backdrop-filter:blur(24px);
 
     box-shadow:
-
         0 20px 60px rgba(0,0,0,.05);
 
 }
 
 .logo{
 
-    width:300px;
+    width:600px;
 
     display:block;
 
@@ -233,7 +236,7 @@ h1{
 
     .logo{
 
-        width:180px;
+        width:300px;
 
         margin-bottom:18px;
 
